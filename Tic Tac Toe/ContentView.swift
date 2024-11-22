@@ -52,6 +52,14 @@ struct ContentView: View {
     }
     private func checkForWinner() {
         checkLine(a: 0, b: 1, c: 2) //top row
+        checkLine(a: 3, b: 4, c: 5) //middle row
+        checkLine(a: 6, b: 7, c: 8) //bottom row
+        checkLine(a: 0, b: 3, c: 6) //first column
+        checkLine(a: 1, b: 4, c: 7) //middle column
+        checkLine(a: 2, b: 5, c: 8) //last column
+        checkLine(a: 0, b: 1, c: 2) //diagonal 1
+        checkLine(a: 0, b: 4, c: 8) //diagonal 2
+        checkLine(a: 2, b: 4, c: 6)
         if !(gameOver || moves.contains("")) {
             winMessage = "Cat's Game"
             gameOver = true
