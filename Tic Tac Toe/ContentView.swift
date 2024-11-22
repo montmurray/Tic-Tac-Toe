@@ -14,7 +14,9 @@ struct ContentView: View {
     @State private var winMessage = ""
     var body: some View {
         VStack {
-            Text("Tic Tac Toe").bold()
+            Text("Tic Tac Toe")
+                .bold()
+                .font(.title)
             LazyVGrid(columns: Array(repeating: GridItem(.fixed(120)), count: 3)) {
                 ForEach(0..<9) { index in
                     ZStack{
